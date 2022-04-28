@@ -1,29 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 
-   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta http-equiv="X-UA-Compatible" content="ie=edge">
-      <title>{{title}}</title>
-      <link rel="stylesheet" href="/stylesheets/style.css" />
-   </head>
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>{{title}}</title>
+   <link rel="stylesheet" href="/stylesheets/style.css" />
+</head>
 
-   <body>
+<body>
 
-      <header id="header">
-         <h1>Hello World</h1>
-            
-         {{#if session.currentUser}}
-            <form id="logout-form" action="/logout" method="POST">
-               <button>Logout</button>
-            </form>
-         {{/if}}
-      </header>
+   <header id="header">
+      <h1>Hello World</h1>
 
-      {{{body}}}
+      {{#if session.currentUser}}
+      <form id="logout-form" action="/logout" method="POST">
+         <button>Logout</button>
+      </form>
+      {{/if}}
+   </header>
 
-      <script src="/js/script.js"></script>
-   </body>
+   <p>
+      <a href="/">Home</a> |
+      <a href="/characters">Characters</a> |
+      <a href="/characters/create">Create new character</a>
+   </p>
+
+   {{{body}}}
+
+   <script src="/js/script.js"></script>
+</body>
 
 </html>
